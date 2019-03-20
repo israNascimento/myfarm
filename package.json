@@ -38,7 +38,7 @@
 		"url-parse": "^1.4.4"
 	},
 	"devDependencies": {
-		"atob": "^2.1.0",
+		"atob": "^2.1.2",
 		"babel-cli": "^6.26.0",
 		"babel-jest": "^24.1.0",
 		"babel-preset-flow": "^6.23.0",
