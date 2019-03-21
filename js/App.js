@@ -19,6 +19,7 @@ import Camera from './componentes/camera.js';
 import Perdas from './perdas';
 //===========================//
 
+
 const analytics = require('./instancias/analytics');
 
 const Deslogado = createStackNavigator({
@@ -79,11 +80,9 @@ export default class App extends React.Component {
 
     render(){
         return(
-          <Root>
-              <StatusBar translucent backgroundColor="transparent" barStyle="light-content"/>
-              <Notificacoes />
-              <Navegador />
-          </Root>
+            <View>
+                <Text>Ola mundo!</Text>
+            </View>
         );
     }
 }
