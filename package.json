@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "react": "16.8.3",
-    "react-native": "0.59.1"
+    "react-native": "0.59.1",
+    "react-native-google-analytics-bridge": "^7.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.0",
