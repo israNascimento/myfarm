@@ -7,6 +7,7 @@ import {
   createAppContainer
 } from 'react-navigation';
 import { Root } from 'native-base';
+import Notificacoes from './instancias/notificacoes';
 
 class Carregando extends React.Component {
   constructor(props) {
