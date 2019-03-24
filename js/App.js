@@ -9,6 +9,20 @@ import {
 import { Root } from 'native-base';
 import Notificacoes from './instancias/notificacoes';
 
+//=========| TELAS |=========//
+import Principal from './principal';
+import Sobre from './sobre';
+import cadPropriedade from './cadPropriedade';
+
+const Deslogado = createStackNavigator(
+  {
+    Inicio: Principal,
+    Sobre: Sobre,
+    'Cadastro de propriedade': cadPropriedade
+  },
+  { headerMode: 'none' }
+);
+
 class Carregando extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +31,7 @@ class Carregando extends React.Component {
 
   verificaLogin = async () => {
     const logado = await AsyncStorage.getItem('logado');
-    //this.props.navigation.navigate(logado == 1 ? 'Logado' : 'Deslogado');
+    this.props.navigation.navigate(logado == 1 ? 'Logado' : 'Deslogado');
     console.log(logado);
   };
 
@@ -32,7 +46,8 @@ class Carregando extends React.Component {
 
 const Navegador = createSwitchNavigator(
   {
-    Carregando: Carregando
+    Carregando: Carregando,
+    Deslogado: Deslogado
   },
   { initialRouteName: 'Carregando' }
 );
