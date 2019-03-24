@@ -1,11 +1,12 @@
 import React from 'react';
-import { AsyncStorage, View, ActivityIndicator } from 'react-native';
+import { StatusBar, AsyncStorage, View, ActivityIndicator } from 'react-native';
 const analytics = require('./instancias/analytics');
 import {
   createStackNavigator,
   createSwitchNavigator,
   createAppContainer
 } from 'react-navigation';
+import { Root } from 'native-base';
 
 class Carregando extends React.Component {
   constructor(props) {
@@ -47,9 +48,15 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View>
+      <Root>
+        <StatusBar
+          translucent
+          backgroundColor="transparent"
+          barStyle="light-content"
+        />
+        <Notificacoes />
         <Container />
-      </View>
+      </Root>
     );
   }
 }
